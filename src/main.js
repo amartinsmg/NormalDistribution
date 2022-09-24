@@ -1,3 +1,5 @@
 require("./main.scss");
-const { gaussianCDF } = require("./gaussian");
+const { drawChart } = require("./chart");
 
+google.charts.load("current", { packages: ["corechart"] });
+google.charts.setOnLoadCallback(drawChart);
