@@ -1,7 +1,5 @@
 function assert(condition) {
-  if (!condition) {
-    throw "Assertion failed";
-  }
+  if (!condition) throw "Assertion failed";
 }
 
 function zScore(mean, standardDev, x) {
@@ -11,8 +9,9 @@ function zScore(mean, standardDev, x) {
   return z;
 }
 
-function gaussianPDF(z_score) {
-  let phi = Math.exp(-(z_score ** 2) / 2) / Math.sqrt(2 * Math.PI);
+function gaussianPDF(mean, standardDev, x) {
+  let z = zScore(mean, standardDev, x),
+    phi = Math.exp(-(z ** 2) / 2) / Math.sqrt(2 * Math.PI);
   return phi;
 }
 
@@ -23,7 +22,7 @@ function gaussianCDF(mean, standardDev, x) {
     denominator = 1,
     sum = 0;
   z = zScore(mean, standardDev, x);
-  phi = gaussianPDF(z);
+  phi = gaussianPDF(mean, standardDev, x);
   for (let i = 1; i <= 100; i += 2) {
     denominator *= i;
     sum += z ** i / denominator;
