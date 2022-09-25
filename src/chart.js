@@ -1,4 +1,4 @@
-const { gaussianCDF, gaussianPDF, zScore } = require("./gaussian");
+const { gaussianPDF } = require("./gaussian");
 
 function createArray(xMin, xMax, x, mean, stdDev) {
   const DataArr = [];
@@ -7,22 +7,20 @@ function createArray(xMin, xMax, x, mean, stdDev) {
     DataArr[i] = new Array(4);
     DataArr[i][0] = j;
     DataArr[i][1] = gaussianPDF(mean, stdDev, j);
-    if (j > x) {
-      DataArr[i][2] = false;
-    }
-    DataArr[i][3] = "opacity: 1; + color: #8064A2; + stroke-color: black;";
+    DataArr[i][2] = j > x ? false : true;
+    DataArr[i][3] = "opacity: 1; + stroke-color: #000";
     i++;
   }
   return DataArr;
 }
 
 function drawChart(
-  chartDivID = "chart",
   xMin = -5.1,
   xMax = 5.1,
-  x = -Infinity,
+  x = -0,
   mean = 0,
-  stdDev = 1
+  stdDev = 1,
+  chartDivID = "chart"
 ) {
   const Chart = new google.visualization.AreaChart(
       document.getElementById(chartDivID)
@@ -30,11 +28,15 @@ function drawChart(
     Data = new google.visualization.DataTable(),
     Options = {
       legend: "none",
+      enableInteractivity: false,
       hAxis: {
-        minorGridLines: {
-          count: 5,
-        },
+        baselineColor: "transparent",
       },
+      vAxis: {
+        baselineColor: "#999",
+      },
+      areaOpacity: 0,
+      height: 350,
     };
   Data.addColumn("number", "X Value");
   Data.addColumn("number", "Y Value");
