@@ -1,6 +1,6 @@
 const { gaussianPDF } = require("./gaussian");
 
-function createArray(xMin, xMax, x, mean, stdDev) {
+function createArray(xMin, xMax, mean, stdDev, x) {
   const DataArr = [];
   let i = 0;
   for (let j = xMin; j <= xMax; j += 0.01 * stdDev) {
@@ -17,9 +17,9 @@ function createArray(xMin, xMax, x, mean, stdDev) {
 function drawChart(
   xMin = -5.1,
   xMax = 5.1,
-  x = -0,
   mean = 0,
   stdDev = 1,
+  x = -Infinity,
   chartDivID = "chart"
 ) {
   const Chart = new google.visualization.AreaChart(
@@ -42,7 +42,7 @@ function drawChart(
   Data.addColumn("number", "Y Value");
   Data.addColumn({ type: "boolean", role: "scope" });
   Data.addColumn({ type: "string", role: "style" });
-  Data.addRows(createArray(xMin, xMax, x, mean, stdDev));
+  Data.addRows(createArray(xMin, xMax, mean, stdDev, x));
   Chart.draw(Data, Options);
 }
 
