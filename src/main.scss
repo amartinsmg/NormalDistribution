@@ -13,8 +13,14 @@
   font-size: 1.3rem;
   gap: 0.4em;
   &-input {
-    font-size: 1rem;
-    padding: 0.2rem;
+    font-size: 1em;
+    padding: 0.2em;
+  }
+  &-btn {
+    font-size: 1em;
+    border: solid 1px;
+    border-radius: 0.3em;
+    padding: 0.4em 0.8em;
   }
 }
 
