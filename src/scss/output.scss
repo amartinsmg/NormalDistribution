@@ -1,0 +1,16 @@
+#out{
+  margin: 1rem 0 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  gap: 0.5rem;
+  #prob {
+    min-height: 3.5rem;
+  }
+  #chart {
+    width: 100%;
+    max-width: 925px;
+    margin: 0 auto;
+  }
+}
