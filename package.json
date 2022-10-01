@@ -12,6 +12,9 @@
     "url": "git+https://github.com/amartinsmg/NormalDistribution.git"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.3",
+    "@babel/preset-env": "^7.19.3",
+    "babel-loader": "^8.2.5",
     "css-loader": "^6.7.1",
     "css-minimizer-webpack-plugin": "^4.0.0",
     "html-loader": "^4.1.0",
