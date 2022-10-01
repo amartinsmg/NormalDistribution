@@ -5,52 +5,82 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Normal Distribution Calculator</title>
+    <link
+      rel="shortcut icon"
+      href="../public/favicon.ico"
+      type="image/x-icon"
+    />
   </head>
 
   <body>
-    <header>
-      <h1>Normal Distribution</h1>
+    <header id="page-header">
+      <h1 id="page-header-heading">Normal Distribution</h1>
     </header>
-    <form action="">
-      <div class="form-group">
-        <label for="">$$\mu =$$</label>
-        <input
-          type="number"
-          class="form-group-input"
-          name="mean"
-          id="mean-input"
-          step="0.000001"
-        />
-      </div>
-      <div class="form-group">
-        <label for="">$$\sigma =$$</label>
-        <input
-          type="number"
-          class="form-group-input"
-          name="stddev"
-          id="stddev-input"
-          step="0.000001"
-          min="0.000001"
-        />
-      </div>
-      <div class="form-group">
-        <label for="">$$x =$$</label>
-        <input
-          type="number"
-          class="form-group-input"
-          name="x"
-          id="x-input"
-          step="0.000001"
-        />
-      </div>
-      <div class="form-group">
-        <button class="form-group-btn" type="submit">Calculate</button>
-      </div>
-    </form>
-    <output id="out">
-      <div id="prob"></div>
-      <div id="chart"></div>
-    </output>
+    <main>
+      <form id="input-form" action="">
+        <div class="form-group">
+          <label for="">$$\mu =$$</label>
+          <input
+            type="number"
+            class="form-group-input"
+            name="mean"
+            id="mean-input"
+            step="0.000001"
+            value="0"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="">$$\sigma =$$</label>
+          <input
+            type="number"
+            class="form-group-input"
+            name="stddev"
+            id="stddev-input"
+            step="0.000001"
+            min="0.000001"
+            value="1"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <label for="">$$x =$$</label>
+          <input
+            type="number"
+            class="form-group-input"
+            name="x"
+            id="x-input"
+            step="0.000001"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <button id="submit-btn" class="form-group-btn" type="submit">
+            Calculate
+          </button>
+        </div>
+      </form>
+      <output id="out">
+        <div id="prob"></div>
+        <div id="chart"></div>
+      </output>
+    </main>
+    <footer id="page-footer">
+      <p>
+        <small
+          >Visit this project's
+          <a href="https://github.com/amartinsmg/NormalDistribution"
+            >repository</a
+          >.<br />
+          Made by <a href="https://amartinsmg.github.io">amartinsmg</a>.
+          <a
+            href="https://www.flaticon.com/free-icons/convert"
+            title="convert icons"
+            >Convert icons created by sonnycandra - Flaticon</a
+          >.
+        </small>
+      </p>
+    </footer>
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
       integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="
