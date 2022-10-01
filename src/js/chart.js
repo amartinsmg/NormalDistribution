@@ -1,4 +1,4 @@
-const { gaussianPDF } = require("./gaussian");
+const { stdGaussianPDF } = require("./gaussian");
 
 function createArray(xMin, xMax, mean, stdDev, x) {
   const DataArr = [];
@@ -6,7 +6,7 @@ function createArray(xMin, xMax, mean, stdDev, x) {
   for (let j = xMin; j <= xMax; j += 0.01 * stdDev) {
     DataArr[i] = new Array(4);
     DataArr[i][0] = j;
-    DataArr[i][1] = gaussianPDF(mean, stdDev, j);
+    DataArr[i][1] = stdGaussianPDF(mean, stdDev, j);
     DataArr[i][2] = j > x ? false : true;
     DataArr[i][3] = "opacity: 1; + stroke-color: #000";
     i++;
