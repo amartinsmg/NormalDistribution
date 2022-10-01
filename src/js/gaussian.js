@@ -23,7 +23,7 @@ function gaussianCDF(mean, standardDev, x) {
     sum = 0;
   z = zScore(mean, standardDev, x);
   phi = gaussianPDF(mean, standardDev, x);
-  for (let i = 1; i <= 100; i += 2) {
+  for (let i = 1; i <= 300; i += 2) {
     denominator *= i;
     sum += z ** i / denominator;
   }
