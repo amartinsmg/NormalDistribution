@@ -5,10 +5,7 @@ It is a personal project for a Web Normal Distribution Calculator. It takes the 
 To calculate the probability, the program uses an approximation to the normal cumulative distribution function (CDF), whose formula is this:
 
 $$
-\phi(x) = \frac{1}{\sqrt{2 \pi}} e^{\frac{1}{2}(\frac{x - \mu}{\sigma})^2}
-$$
-$$
-P(X \le x) = \int_{-\infty}^{x}{\phi(x)dx}
+P(X \le x) = \int_{-\infty}^{x}{\frac{1}{\sqrt{2 \pi}} e^{\frac{1}{2}(\frac{x - \mu}{\sigma})^2} dx}
 $$
 
 The used approximation uses a Taylor series approximation:
