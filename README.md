@@ -11,7 +11,7 @@ $$
 The used approximation uses a Taylor series approximation:
 
 $$
-P(X \le x) = \frac{1}{2} + \phi(x) \sum_{n = 0}^{\infty}{\frac{1}{1 \cdot 3 \cdot 5 ... (2n + 1)}x^{2n+1}}
+P(X \le x) = \frac{1}{2} + \frac{1}{\sqrt{2 \pi}} e^{\frac{1}{2}(\frac{x - \mu}{\sigma})^2} \cdot \sum_{n = 0}^{\infty}{\frac{1}{1 \cdot 3 \cdot 5 ... (2n + 1)}x^{2n+1}}
 $$
 
 It uses MathJax to display the mathematical notations and the Google Chart API to plot the graph.
