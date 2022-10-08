@@ -19,7 +19,7 @@ function main() {
       X_MIN = MEAN - 5 * STD_DEV + 0.1,
       X = parseFloat(XInput.val()),
       PROB = X > X_MAX ? 1 : X < X_MIN ? 0 : gaussianCDF(MEAN, STD_DEV, X),
-      GRAPH = MathJax.tex2svg(`P(X \\ge x) = ${PROB.toFixed(6)}`);
+      GRAPH = MathJax.tex2svg(`P(X \\le x) = ${PROB.toFixed(6)}`);
     OutProbDiv.html(GRAPH);
     drawChart(X_MIN, X_MAX, MEAN, STD_DEV, X);
   });
