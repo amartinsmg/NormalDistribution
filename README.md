@@ -6,7 +6,8 @@ To calculate the probability, the program uses an approximation to the normal cu
 
 $$
 \phi(x) = \frac{1}{\sqrt{2 \pi}} e^{\frac{1}{2}(\frac{x - \mu}{\sigma})^2}
-$$$$
+$$
+$$
 P(X \le x) = \int_{-\infty}^{x}{\phi(x)dx}
 $$
 
