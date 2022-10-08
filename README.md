@@ -1,6 +1,6 @@
 # NormalDistribution
 
-It is a personal project for a Web Normal Distribution Calculator. It takes the user input using jQuery. Being X a random, normally distributed variable, the program calculates the probability that X will take a value less than or equal to x.
+It is a personal project for a Web Normal Distribution Calculator. It takes the user input using jQuery. Being $X$ a random, normally distributed variable, the program calculates the probability that $X$ will take a value less than or equal to $x$.
 
 To calculate the probability, the program uses an approximation to the normal cumulative distribution function (CDF), whose formula is this:
 
