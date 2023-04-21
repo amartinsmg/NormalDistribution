@@ -1,7 +1,6 @@
 {
-  "name": "normaldistribution",
+  "name": "normal_distribution",
   "version": "1.0.0",
-  "description": "",
   "main": "src/main.js",
   "scripts": {
     "build": "webpack",
@@ -26,11 +25,5 @@
     "webpack": "^5.73.0",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.9.3"
-  },
-  "author": "amartinsmg",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/amartinsmg/NormalDistribution/issues"
-  },
-  "homepage": "https://github.com/amartinsmg/NormalDistribution#readme"
+  }
 }
