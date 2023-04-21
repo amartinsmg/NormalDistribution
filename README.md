@@ -42,6 +42,6 @@ This project is licensed under the [MIT License](./LICENSE).
 
 This project uses the following libraries:
 
-jQuery (https://jquery.com/)
-MathJax (https://www.mathjax.org/)
-Google Charts (https://developers.google.com/chart)
+- jQuery (https://jquery.com/)
+- MathJax (https://www.mathjax.org/)
+- Google Charts (https://developers.google.com/chart)
