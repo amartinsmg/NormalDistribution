@@ -1,19 +1,39 @@
-function assert(condition) {
-  if (!condition) throw "Assertion failed";
-}
+/**
+  Calculates the z-score of a given value.
+    @param mean The mean value.
+    @param standardDev The standard deviation.
+    @param x The value to calculate the z-score.
+    @return The z-score.
+    @throws An error message if the standard deviation is not greater than zero.
+*/
 
 function zScore(mean, standardDev, x) {
-  let z;
-  assert(standardDev > 0);
-  z = (x - mean) / standardDev;
+  if (standardDev <= 0) throw "Standard deviation must be positive";
+  let z = (x - mean) / standardDev;
   return z;
-}
+  }
+  
+/**
+  Calculates the standard Gaussian probability density function of a given value.
+    @param mean The mean value.
+    @param standardDev The standard deviation.
+    @param x The value to calculate the standard Gaussian probability density function.
+    @return The standard Gaussian probability density function.
+*/
 
 function stdGaussianPDF(mean, standardDev, x) {
   let z = zScore(mean, standardDev, x),
     phi = Math.exp(-(z ** 2) / 2) / Math.sqrt(2 * Math.PI);
   return phi;
 }
+
+/**
+  Calculates the Gaussian cumulative distribution function of a given value.
+    @param mean The mean value.
+    @param standardDev The standard deviation.
+    @param x The value to calculate the Gaussian cumulative distribution function.
+    @return The Gaussian cumulative distribution function.
+*/
 
 function gaussianCDF(mean, standardDev, x) {
   let phi,
