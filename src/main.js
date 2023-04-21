@@ -11,6 +11,12 @@ function main() {
     XInput = $("#x-input"),
     Form = $("#input-form"),
     OutProbDiv = $("#prob");
+
+  /**
+    This function handles the form submit event.
+    @param e - The event object.
+  */
+
   Form.on("submit", (e) => {
     e.preventDefault();
     const MEAN = parseFloat(MeanInput.val()),
@@ -25,4 +31,4 @@ function main() {
   });
 }
 
-window.addEventListener("load", main);
+$(document).ready(main);
