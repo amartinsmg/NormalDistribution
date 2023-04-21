@@ -5,6 +5,8 @@ const { drawChart } = require("./js/chart"),
 google.charts.load("current", { packages: ["corechart"] });
 google.charts.setOnLoadCallback(drawChart);
 
+// This is the main function that handles the form submit event to calculate the probability and to display the plot
+
 function main() {
   const MeanInput = $("#mean-input"),
     StdDevInput = $("#stddev-input"),
@@ -30,5 +32,7 @@ function main() {
     drawChart(X_MIN, X_MAX, MEAN, STD_DEV, X);
   });
 }
+
+// Execute the main function on page load.
 
 $(document).ready(main);
