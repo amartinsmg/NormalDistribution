@@ -32,7 +32,7 @@ After the build process is complete, you can open the index.html file located in
 
 ## Contributing
 
-Contributions to the Unit Converter project are welcome. If you find a bug or have a suggestion for an improvement, please open an issue or submit a pull request.
+Contributions to this project are welcome. If you find a bug or have a suggestion for an improvement, please open an issue or submit a pull request.
 
 ## License
 
